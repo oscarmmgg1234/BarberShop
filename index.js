@@ -15,7 +15,7 @@ class App extends Component {
                 <Stack.Navigator>
                     <Stack.Screen
                         name="plash"
-                        component={splash}
+                        component={splash}add
                         options={{title: 'Welcome'}}
                     />
                 </Stack.Navigator>
@@ -23,6 +23,6 @@ class App extends Component {
            )
 }
 }
+//zample
 
-
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => App)
