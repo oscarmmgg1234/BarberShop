@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
 import {AppRegistry} from 'react-native';
 import {name as appName} from './index.json';
-import {createStackNavigator} from "react-navigation-stack";
+import {createStackNavigator} from "@react-navigation/stack";
 import splash from "./src/Screens/splashScreen";
 import {NavigationContainer} from '@react-navigation/native';
+import {isDisabled} from "react-native/Libraries/LogBox/Data/LogBoxData";
 
 
 const Stack = createStackNavigator();
 
-class App extends Component {
+export default class App extends Component {
 
     render(){
            return( <NavigationContainer>
@@ -16,7 +17,7 @@ class App extends Component {
                     <Stack.Screen
                         name="plash"
                         component={splash}
-                        options={{title: 'Welcome'}}
+                        options={{headerShown: false}}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
@@ -24,5 +25,4 @@ class App extends Component {
 }
 }
 
-
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName,()=> App);
