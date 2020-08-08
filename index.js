@@ -16,13 +16,13 @@ class App extends Component {
                     <Stack.Screen
                         name="plash"
                         component={splash}add
-                        options={{title: 'Welcome'}}
+                        options={{headerMode: "none"}}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
            )
 }
 }
-//zample
+
 
 AppRegistry.registerComponent(appName, () => App)

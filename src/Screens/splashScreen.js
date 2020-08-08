@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import SplashScreen from "react-native-splash-screen";
-import {Text,View,StyleSheet} from "react-native";
+import {Text,View,StyleSheet,Image} from "react-native";
 
 
 class splash extends Component {
@@ -15,6 +15,12 @@ class splash extends Component {
 render(){
 
         return <View style= {styles.viewContainer}>
+            <View><Text>CUT</Text><Text>The perfect place to get your hair ruined!</Text>
+            <Image/>
+            </View>
+            
+
+
     </View>
 }
 
