@@ -16,12 +16,12 @@ class splash extends Component {
 render(){
 
         return(<>
-        <ImageBackground source={require("../ASSETS/baberBackground.jpg")} style={{position: "absolute",width: 430,height: 900
+        <ImageBackground source={require("../ASSETS/baberBackground1.jpg")} style={{position: "absolute",width: 430,height: 900
 
             }}/>
         <View style= {styles.mainView} >
             <Image source={require("../ASSETS/barberLogo.png")} style={styles.topHeaderLogo}/>
-            <View style={styles.topHeader}><Text style={styles.MHLabel}>CUT</Text><Text style={styles.MHLabel}>The perfect place to get your hair ruined!</Text>
+            <View style={styles.topHeader}><Text style={styles.MHLabel}>CUT</Text><Text style={styles.MHBottomLabel}>The perfect place to get your hair ruined!</Text>
 
             </View>
             <View style={styles.mainButtonView}>
@@ -60,9 +60,12 @@ fontSize: 40,
         fontFamily: "times"
 
     },
+    MHBottomLabel:{
+color: "white"
+    },
     topHeaderLogo: {
-        width: 200,
-        height: 200,
+        width: 300,
+        height: 300,
         alignSelf: "center",
         marginTop: 35
     },
@@ -83,7 +86,7 @@ fontSize: 40,
         width: 90,
         backgroundColor: "rgba(255,190,0,0.9)",
         borderRadius: 3,
-        marginHorizontal: 30,
+        marginHorizontal: 5,
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 80
