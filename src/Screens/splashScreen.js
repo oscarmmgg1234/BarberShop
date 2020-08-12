@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     MHLabel: {
         marginTop:25,
 fontSize: 40,
-        color: "white"
+        color: "rgba(250,255,245,0.9)",
+        fontFamily: "times"
 
     },
     topHeaderLogo: {
@@ -70,7 +71,8 @@ fontSize: 40,
         width: 90,
         backgroundColor: "rgba(255,190,0,0.9)",
         borderRadius: 3,
-        marginHorizontal: 30,
+        marginHorizontal: 15
+        ,
         alignItems: "center",
         justifyContent: "center",
         marginBottom: 40
@@ -84,7 +86,7 @@ fontSize: 40,
         marginHorizontal: 30,
         alignItems: "center",
         justifyContent: "center",
-        marginBottom: 100
+        marginBottom: 80
     },
     mainButtonView: {
         justifyContent: "center",
