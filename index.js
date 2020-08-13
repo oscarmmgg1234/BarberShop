@@ -4,7 +4,7 @@ import {name as appName} from './index.json';
 import {createStackNavigator} from "@react-navigation/stack";
 import splash from "./src/Screens/splashScreen";
 import {NavigationContainer} from '@react-navigation/native';
-
+import login from './src/Screens/login'
 
 
 
@@ -18,15 +18,20 @@ export default class App extends Component {
            return( <NavigationContainer>
                 <Stack.Navigator>
                     <Stack.Screen
-                        name="plash"
-
-                        component={splash}add
-                        options={{headerMode: "none"}}
-
+                        name="splash"
+                        initialRouteName={splash}
                         component={splash}
                         options={{headerShown: false}}
 
                     />
+                    <Stack.Screen
+                        name="login"
+                        component={login}
+                        options={{headerShown: false}
+                            }
+
+                    />
+
                 </Stack.Navigator>
             </NavigationContainer>
            )

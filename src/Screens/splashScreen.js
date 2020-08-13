@@ -21,12 +21,12 @@ render(){
             }}/>
         <View style= {styles.mainView} >
             <Image source={require("../ASSETS/barberLogo.png")} style={styles.topHeaderLogo}/>
-            <View style={styles.topHeader}><Text style={styles.MHLabel}>CUT</Text><Text style={styles.MHBottomLabel}>The perfect place to get your hair ruined!</Text>
+            <View style={styles.topHeader}><Text style={styles.MHLabel}>The Cut Truth</Text><Text style={styles.MHBottomLabel}>This hairsalon is the perfect place to  get your hair ruined!</Text>
 
             </View>
             <View style={styles.mainButtonView}>
-                <TouchableOpacity style={styles.mainButton}><Text>Register</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.loginButton}><Text>Login</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.mainButton} ><Text>Register</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.loginButton} onPress={()=>this.props.navigation.navigate('login')}><Text>Login</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.mainButton}><Text>Guest</Text></TouchableOpacity>
             </View>
 
@@ -43,7 +43,7 @@ render(){
 const styles = StyleSheet.create({
     mainView:{
         backgroundColor:"rgba(0,0,0,0.1)", //beautiful green 20,200,50,0.1)
-        flex: 1,
+        flex: 1
 
     },
     topHeader:{
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
     },
     MHLabel: {
-        marginTop:25,
+
 fontSize: 40,
         color: "rgba(250,255,245,0.9)",
         fontFamily: "times"
