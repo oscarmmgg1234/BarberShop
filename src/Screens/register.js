@@ -19,7 +19,7 @@ class register extends Component{
                         <TextInput style={styles.forms}/>
                         <Text style={styles.formsLabel} >Password: </Text>
                         <TextInput style={styles.forms}/>
-                        <TouchableOpacity style={styles.submitBtn}><Text>Submit</Text></TouchableOpacity>
+                        <TouchableOpacity style={styles.submitBtn}><Text>Continue</Text></TouchableOpacity>
                         <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{marginTop: 150,height: 70,width: 70,borderRadius: 70,
                             borderColor: "black",borderWidth: 4}}/></TouchableOpacity>
 
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     forms: {
         height: 30,
         width: 300,
-        backgroundColor: "white",
+        backgroundColor: "rgba(255,255,255,0.8)",
         marginTop: 15,
         borderRadius: 5
 

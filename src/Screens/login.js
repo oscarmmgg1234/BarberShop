@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Text,StyleSheet,TextInput,View,TouchableOpacity,ImageBackground,Image} from "react-native";
+import CheckBox from '@react-native-community/checkbox';
 
 class login extends Component{
     constructor(props) {
@@ -9,6 +10,7 @@ class login extends Component{
     render(){
         return (
             <>
+
             <ImageBackground source={require("../ASSETS/LoginBack.png")} style={{position: "absolute",width: 500,height: 1000}}/>
             <View style={styles.mainView}>
                 <Text style={styles.loginLabel}>Login</Text>
@@ -17,8 +19,12 @@ class login extends Component{
             <TextInput style={styles.forms}/>
                 <Text style={styles.formsLabel} >Password: </Text>
             <TextInput style={styles.forms}/>
-                    <TouchableOpacity style={styles.submitBtn}><Text>Submit</Text></TouchableOpacity>
-                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 230,borderRadius: 70,
+                    <View style={styles.Submitview}>
+                    <TouchableOpacity style={styles.submitBtn}><Text>Continue</Text></TouchableOpacity>
+                    <CheckBox style={styles.checkBox}/>
+                        <Text style={styles.rememberLabel}> Remember me!</Text>
+                    </View>
+                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 220,borderRadius: 70,
                        borderColor: "black",borderWidth: 4}}/></TouchableOpacity>
 
                 </View>
@@ -34,7 +40,7 @@ const styles = StyleSheet.create({
 forms: {
     height: 30,
     width: 300,
-    backgroundColor: "white",
+    backgroundColor: "rgba(255,255,255,0.8)",
     marginTop: 15,
     borderRadius: 5
 
@@ -73,6 +79,26 @@ forms: {
         justifyContent: "center",
         fontFamily: "times"
 
+    },
+    checkBox: {
+    height: 30,
+        width: 30,
+marginLeft: 40,
+        marginTop: 55
+    },
+    Submitview: {
+    flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        width:200,
+        height: 100
+
+    },
+    rememberLabel: {
+        marginTop: 55,
+        color: "white",
+        fontFamily: "times",
+        marginLeft: 10
     }
 
 
