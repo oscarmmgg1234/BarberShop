@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Text,StyleSheet,TextInput,View,TouchableOpacity,ImageBackground,Image} from "react-native";
 
 class login extends Component{
+    constructor(props) {
+        super(props);
+    }
 
     render(){
         return (
@@ -15,7 +18,8 @@ class login extends Component{
                 <Text style={styles.formsLabel} >Password: </Text>
             <TextInput style={styles.forms}/>
                     <TouchableOpacity style={styles.submitBtn}><Text>Submit</Text></TouchableOpacity>
-                    <Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 200,borderRadius: 70}}/>
+                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 200,borderRadius: 70,
+                       borderColor: "black",borderWidth: 4}}/></TouchableOpacity>
 
                 </View>
             </View>
@@ -56,7 +60,7 @@ forms: {
         color: "white",
         alignSelf: "center",
         marginTop: 70,
-        fontFamily: "mishafi"
+        fontFamily: "times"
     },
     submitBtn:{
     marginTop: 60,
