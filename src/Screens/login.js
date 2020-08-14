@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import {Text,StyleSheet,TextInput,View,TouchableOpacity} from "react-native";
+import {Text,StyleSheet,TextInput,View,TouchableOpacity,ImageBackground,Image} from "react-native";
 
 class login extends Component{
 
     render(){
         return (
+            <>
+            <ImageBackground source={require("../ASSETS/LoginBack.png")} style={{position: "absolute",width: 500,height: 1000}}/>
             <View style={styles.mainView}>
                 <Text style={styles.loginLabel}>Login</Text>
                 <View style={styles.FormView}>
@@ -12,10 +14,12 @@ class login extends Component{
             <TextInput style={styles.forms}/>
                 <Text style={styles.formsLabel} >Password: </Text>
             <TextInput style={styles.forms}/>
-                    <TouchableOpacity ><Text style={styles.submitBtn}>Submit</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.submitBtn}><Text>Submit</Text></TouchableOpacity>
+                    <Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 200,borderRadius: 70}}/>
 
                 </View>
             </View>
+                </>
         )
             }
 
@@ -26,14 +30,14 @@ const styles = StyleSheet.create({
 forms: {
     height: 30,
     width: 300,
-    backgroundColor: "orange",
+    backgroundColor: "white",
     marginTop: 15,
     borderRadius: 5
 
 },
     mainView:{
         flex: 1,
-        backgroundColor: "rgba(0,0,0,0.9)",
+        backgroundColor: "rgba(0,0,0,0.8)",
 
     },
     formsLabel: {
@@ -48,18 +52,21 @@ forms: {
         alignItems: "center"
     },
     loginLabel: {
-    fontSize: 40,
+    fontSize: 50,
         color: "white",
         alignSelf: "center",
         marginTop: 70,
-        fontFamily: "times"
+        fontFamily: "mishafi"
     },
     submitBtn:{
     marginTop: 60,
     color: "white",
-        backgroundColor: "lightblue",
-        width: 100,
-        height: 30,
+        backgroundColor: "orange",
+        width: 120,
+        height: 40,
+        borderRadius: 30,
+        alignItems: "center",
+        justifyContent: "center"
 
     }
 
