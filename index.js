@@ -5,7 +5,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 import splash from "./src/Screens/splashScreen";
 import {NavigationContainer} from '@react-navigation/native';
 import login from './src/Screens/login'
-
+import register from "./src/Screens/register";
 
 
 const Stack = createStackNavigator();
@@ -31,7 +31,11 @@ export default class App extends Component {
                             }
 
                     />
-
+                    <Stack.Screen
+                        name="register"
+                        component={register}
+                        options={{headerShown: false}}
+                    />
                 </Stack.Navigator>
             </NavigationContainer>
            )

@@ -25,7 +25,7 @@ render(){
 
             </View>
             <View style={styles.mainButtonView}>
-                <TouchableOpacity style={styles.mainButton} ><Text>Register</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.mainButton} onPress={()=>this.props.navigation.navigate('register')}><Text>Register</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.loginButton} onPress={()=>this.props.navigation.navigate('login')}><Text>Login</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.mainButton}><Text>Guest</Text></TouchableOpacity>
             </View>

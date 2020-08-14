@@ -48,7 +48,7 @@ forms: {
         fontFamily: "times",
         fontSize: 20,
         color: "white",
-        marginTop: 2,
+        marginTop: 10,
 
     },
     FormView: {
@@ -70,7 +70,8 @@ forms: {
         height: 40,
         borderRadius: 30,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        fontFamily: "times"
 
     }
 
