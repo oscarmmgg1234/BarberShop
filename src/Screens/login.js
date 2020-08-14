@@ -18,7 +18,7 @@ class login extends Component{
                 <Text style={styles.formsLabel} >Password: </Text>
             <TextInput style={styles.forms}/>
                     <TouchableOpacity style={styles.submitBtn}><Text>Submit</Text></TouchableOpacity>
-                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 200,borderRadius: 70,
+                   <TouchableOpacity onPress={()=>this.props.navigation.navigate('splash')}><Image source={require("../ASSETS/scizors.png")} style={{height: 70,width: 70,marginTop: 230,borderRadius: 70,
                        borderColor: "black",borderWidth: 4}}/></TouchableOpacity>
 
                 </View>
@@ -48,7 +48,7 @@ forms: {
         fontFamily: "times",
         fontSize: 20,
         color: "white",
-        marginTop: 20,
+        marginTop: 2,
 
     },
     FormView: {
@@ -59,7 +59,7 @@ forms: {
     fontSize: 50,
         color: "white",
         alignSelf: "center",
-        marginTop: 70,
+        marginTop: 100,
         fontFamily: "times"
     },
     submitBtn:{
