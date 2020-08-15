@@ -13,6 +13,10 @@ class register extends Component{
                 <View style={styles.mainView}>
                     <Text style={styles.loginLabel}>Register</Text>
                     <View style={styles.FormView}>
+                        <View>
+                        <Text style={styles.formsLabel}>First Name: </Text>
+                        <TextInput style={styles.forms}/>
+                        </View>
                         <Text style={styles.formsLabel}>Username: </Text>
                         <TextInput style={styles.forms}/>
                         <Text style={styles.formsLabel} >Email:  </Text>
@@ -75,6 +79,15 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         fontFamily: "times"
+
+    },
+    nameInput: {
+
+    },
+    nameHeaders: {
+
+    },
+    nameView:{
 
     }
 

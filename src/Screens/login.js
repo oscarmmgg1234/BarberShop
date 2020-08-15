@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import {Text,StyleSheet,TextInput,View,TouchableOpacity,ImageBackground,Image} from "react-native";
 import CheckBox from '@react-native-community/checkbox';
 
+
 class login extends Component{
+    state = {username: "",password: ""};
     constructor(props) {
         super(props);
     }
+
 
     render(){
         return (
@@ -16,9 +19,9 @@ class login extends Component{
                 <Text style={styles.loginLabel}>Login</Text>
                 <View style={styles.FormView}>
                 <Text style={styles.formsLabel}>Username: </Text>
-            <TextInput style={styles.forms}/>
+            <TextInput style={styles.forms} value={this.state.username} onChangeText={username=>this.setState({username})}  placeholder={"Username"}/>
                 <Text style={styles.formsLabel} >Password: </Text>
-            <TextInput style={styles.forms}/>
+            <TextInput style={styles.forms} value={this.state.password} onChangeText={password=>this.setState({password})} placeholder={"Password"}/>
                     <View style={styles.Submitview}>
                     <TouchableOpacity style={styles.submitBtn}><Text>Continue</Text></TouchableOpacity>
                     <CheckBox style={styles.checkBox}/>
@@ -42,7 +45,8 @@ forms: {
     width: 300,
     backgroundColor: "rgba(255,255,255,0.8)",
     marginTop: 15,
-    borderRadius: 5
+    borderRadius: 5,
+    paddingHorizontal: 7
 
 },
     mainView:{

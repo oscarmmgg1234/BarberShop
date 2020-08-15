@@ -25,9 +25,9 @@ render(){
 
             </View>
             <View style={styles.mainButtonView}>
+                <TouchableOpacity style={styles.mainButton} onPress={()=>this.props.navigation.navigate('login')}><Text>Login</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.mainButton} onPress={()=>this.props.navigation.navigate('register')}><Text>Register</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.loginButton} onPress={()=>this.props.navigation.navigate('login')}><Text>Login</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.mainButton} onPress={()=>this.props.navigation.navigate('guest')}><Text>Guest</Text></TouchableOpacity>
+
             </View>
 
 
@@ -70,27 +70,19 @@ color: "white"
         marginTop: 35
     },
     mainButton: {
-    height: 40,
-        width: 90,
+    height: 50,
+        width: 110,
         backgroundColor: "rgba(255,190,0,0.9)",
-        borderRadius: 3,
-        marginHorizontal: 15
+        borderRadius: 7,
+        marginHorizontal: 30
         ,
         alignItems: "center",
         justifyContent: "center",
-        marginBottom: 40
+        marginBottom: 60,
 
-    },
-    loginButton:{
-        height: 40,
-        width: 90,
-        backgroundColor: "rgba(255,190,0,0.9)",
-        borderRadius: 3,
-        marginHorizontal: 5,
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: 80
-    },
+
+    }
+    ,
     mainButtonView: {
         justifyContent: "center",
         flexDirection: "row",

@@ -6,7 +6,7 @@ import splash from "./src/Screens/splashScreen";
 import {NavigationContainer} from '@react-navigation/native';
 import login from './src/Screens/login'
 import register from "./src/Screens/register";
-import guest from "./src/Screens/guest"
+
 
 
 const Stack = createStackNavigator();
@@ -37,11 +37,6 @@ export default class App extends Component {
                         component={register}
                         options={{headerShown: false}}
                     />
-                    <Stack.Screen
-                        name="guest"
-                        component={guest}
-                        options={{headerShown: false}}
-                        />
                 </Stack.Navigator>
             </NavigationContainer>
            )
